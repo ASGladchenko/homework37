@@ -100,8 +100,11 @@ navigationMenu.addEventListener('click', event => {
                         path += card.querySelector('.main__post_id').innerHTML.match(regExp)[0]
                         fetch('https://jsonplaceholder.typicode.com/posts/1', {
                             method: 'DELETE',
+                        }).then(resolve=> {
+                            if (resolve.status === 200 ) card.remove()
+                            popUpMessage(postsAlertMessage, 1000, '#bafdb3', "You successfully delete post('s) ")
                         })
-                        card.remove()
+
                     }
                 })
                 if (mainCardsPosts.children.length < 1) mainContainer.querySelector('.main__message_empty').classList.remove('d-none')
