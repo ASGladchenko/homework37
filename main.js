@@ -174,7 +174,7 @@ navigationMenu.addEventListener('click', event => {
         }
 
         function renderCommentsContainer(comments) {
-            return `<div className="main__post_container">
+            return `<div class="main__post_container">
                             <h3>Comments :</h3>
                         ${comments}
                     </div>`
