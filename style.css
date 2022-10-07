@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.d-none {
+  display: none;
+}
+
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
+body {
+  background: rgba(168, 247, 242, 0.9920343137);
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+header {
+  box-shadow: 0 0 35px 15px #3d99b7;
+  padding: 20px 0 5px;
+  text-align: center;
+  background-color: #36618a;
+  color: white;
+}
+header h2 {
+  font-size: 36px;
+}
+header .header__navigation {
+  margin-left: 10%;
+  text-align: left;
+  border-radius: 5px;
+}
+header .header__navigation .main__navigation_btn {
+  padding: 5px 20px;
+}
+
+.main {
+  padding: 50px 0;
+}
+.main .container {
+  position: relative;
+  text-align: center;
+}
+.main .container .postsBtn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: -46px;
+  color: white;
+  background-color: #36618a;
+  transition: 0.17s;
+}
+.main .container .postsBtn:hover {
+  transition: transform 0.17s;
+  transform: scale(1.07);
+}
+.main .container #getAllPosts {
+  top: -28px;
+  right: 65px;
+  position: absolute;
+}
+.main .container #deletePosts {
+  position: absolute;
+  top: -28px;
+  right: 0;
+}
+.main .container #selectAllPosts {
+  position: absolute;
+  top: -28px;
+  right: 168px;
+}
+.main .container form {
+  margin-bottom: 50px;
+  border-radius: 5px;
+  box-shadow: -5px 5px 10px grey;
+  padding: 10px 20px;
+  color: white;
+  background-color: #36618a;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.main .container form h3 {
+  text-shadow: 0 0 8px #ccd5e8;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center;
+}
+.main .container form textarea {
+  background-color: #bcd6ee;
+  margin: 10px 0 10px;
+  text-align: center;
+  width: 100%;
+  height: 34px;
+  resize: none;
+}
+.main .container form .inCorrect {
+  background-color: #f6b0b0;
+}
+.main .container form input {
+  width: 50%;
+  background-color: #bcd6ee;
+}
+.main .container form input:target {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.main .container form select {
+  background-color: #bcd6ee;
+}
+.main .container form button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px 10px;
+  transition: 0.18s;
+  background-color: #bcd6ee;
+  color: black;
+}
+.main .container form button:hover {
+  transition: 0.18s;
+  transform: scale(1.07);
+}
+.main .container .main__cards_posts {
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.main .container .main__cards_posts .main__cards_post {
+  position: relative;
+  transition: 0.22s;
+  box-shadow: -5px 5px 10px grey;
+  padding: 15px 10px 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgba(54, 97, 138, 0.72);
+}
+.main .container .main__cards_posts .main__cards_post .main__post_comments {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+}
+.main .container .main__cards_posts .main__cards_post .main__post_comments:hover {
+  color: #c4f1e9;
+}
+.main .container .main__cards_posts .main__post_title {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.main .container .main__cards_posts .main__post_title:first-letter {
+  text-transform: capitalize;
+}
+.main .container .main__cards_posts .main__post_body {
+  margin-bottom: 10px;
+}
+.main .container .main__cards_posts .main__post_body:first-letter {
+  text-transform: capitalize;
+}
+.main .container .main__cards_posts .main__post_userId {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+.main .container .main__cards_posts .main__post_id {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.main .main__message_alert {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -100px;
+  width: 280px;
+  background-color: white;
+}
+.main .main__message_alert p {
+  font-size: 25px;
+}
+.main .main__message_empty {
+  font-size: 56px;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.main .container .main__cards_posts .main__post_active {
+  background-color: rgba(108, 140, 182, 0.72);
+  transform: scale(1.01);
+  transition: 0.22s;
+}
+.main .container .main__cards_posts .main__post_active .main__post_comments {
+  display: block;
+}
+
+.message_incorrect {
+  background-color: #f69e9e;
+}
+
+.main__card_comment {
+  position: relative;
+  padding: 10px 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+.main__card_comment .main__comment_email {
+  position: absolute;
+  left: 10%;
+  margin-left: -100px;
+  bottom: 0;
+}
+.main__card_comment .main__comment_topic {
+  font-weight: bolder;
+}
+.main__card_comment a:hover {
+  color: #d7e2ea;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
